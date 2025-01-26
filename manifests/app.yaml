@@ -5,10 +5,10 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: git@github.com:Tinega-Devops/kubernetes-ci-cd-demo.git
+    repoURL: https://github.com/woodez-kubernetes/kubernetes-ci-cd-demo.git # Use your forked github repo of this project.
     targetRevision: main
     path: manifests
   destination:
-    server: https://kubernetes.default.svc
+    server: https://kubernetes.default.svc # Use your own cluster server
     namespace: default
   project: default
