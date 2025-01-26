@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: current-time-api
+  labels:
+    app: current-time-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: current-time-api
+  template:
+    metadata:
+      labels:
+        app: current-time-api
+    spec:
+      containers:
+      - name: current-time-api
+        image: tinegaonchari/current-time-api:latest
+        ports:
+        - containerPort: 3000

@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: current-time-api
+  namespace: argocd
+spec:
+  source:
+    repoURL: https://github.com/woodez-kubernetes/kubernetes-ci-cd-demo.git # Use your forked github repo of this project.
+    targetRevision: main
+    path: manifests
+  destination:
+    server: https://kubernetes.default.svc # Use your own cluster server
+    namespace: default
+  project: default
