@@ -5,7 +5,7 @@ metadata:
   labels:
     app: current-time-api
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: current-time-api
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: current-time-api
-        image: tinegaonchari/current-time-api:latest
+        image: kwood475/current-time-api:latest
         ports:
         - containerPort: 3000
